@@ -1,0 +1,13 @@
+<div class="ui styled accordion">
+  <ng-container *ngFor="let item of items; let i = index">
+    <div class="title"
+         [class.active]="i == openedItemIndex"
+         (click)="onToggleTab(i)">
+      <i class="dropdown icon"></i>
+      {{ item.title }}
+    </div>
+    <div class="content" [class.active]="i == openedItemIndex">
+      <p>{{ item.content }}</p>
+    </div>
+  </ng-container>
+</div>
